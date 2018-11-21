@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "diff2html": "^2.5.0",
     "pug": "^2.0.3"
   },
   "devDependencies": {},
