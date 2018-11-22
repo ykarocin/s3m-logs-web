@@ -1,45 +1,55 @@
 //- template.pug
-p #{name}'s Pug source code!
-details
-  summary Case #{caseNumber} - #{id}
-  p some observations
-  p some more observations
-  p result is
-    b ok
-  table
-    tr
-      td
-        details
-          summary Base
-          pre(class="prettyprint")
-            code #{baseSource}
-      td
-        details
-          summary Left
-          pre(class="prettyprint")
-            code #{leftSource}
-      td
-        details
-          summary Right
-          pre(class="prettyprint")
-            code #{rightSource}
-      td
-        details
-          summary MergeMethods
-          pre(class="prettyprint")
-            code #{mergeMethodsSource}
-      td
-        details
-          summary KeepBothMethods
-          pre(class="prettyprint")
-            code #{keepBothMethodsSource}
-      td
-        details
-          summary Safe
-          pre(class="prettyprint")
-            code #{safeSource}
-      td
-        details
-          summary Unstructured
-          pre(class="prettyprint")
-            code #{unstructuredSource}
+
+mixin method_comments(label, items)
+  li #{label}
+  ul
+    each item in items
+      li= item
+
+mixin comments(items)
+  ul
+    each item in items
+      +method_comments(item[0], item[1])
+
+tr
+  td
+    details
+      summary Case #{caseNumber} - #{title}
+      +comments(list)
+      table( class="table table-bordered")
+        tr
+          td
+            details
+              summary Base
+              pre(class="prettyprint linenums")
+                code #{baseSource}
+          td
+            details
+              summary Left
+              pre(class="prettyprint linenums")
+                code #{leftSource}
+          td
+            details
+              summary Right
+              pre(class="prettyprint linenums")
+                code #{rightSource}
+          td
+            details
+              summary MergeMethods
+              pre(class="prettyprint linenums")
+                code #{mergeMethodsSource}
+          td
+            details
+              summary KeepBothMethods
+              pre(class="prettyprint linenums")
+                code #{keepBothMethodsSource}
+          td
+            details
+              summary Safe
+              pre(class="prettyprint linenums")
+                code #{safeSource}
+          td
+            details
+              summary Unstructured
+              pre(class="prettyprint linenums")
+                code #{unstructuredSource}
