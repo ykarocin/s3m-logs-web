@@ -13,43 +13,67 @@ mixin comments(items)
 
 tr
   td
-    details
-      summary Case #{caseNumber} - #{title}
-      +comments(list)
-      table( class="table table-bordered")
-        tr
-          td
-            details
-              summary Base
-              pre(class="prettyprint linenums")
-                code #{baseSource}
-          td
-            details
-              summary Left
-              pre(class="prettyprint linenums")
-                code #{leftSource}
-          td
-            details
-              summary Right
-              pre(class="prettyprint linenums")
-                code #{rightSource}
-          td
-            details
-              summary MergeMethods
-              pre(class="prettyprint linenums")
-                code #{mergeMethodsSource}
-          td
-            details
-              summary KeepBothMethods
-              pre(class="prettyprint linenums")
-                code #{keepBothMethodsSource}
-          td
-            details
-              summary Safe
-              pre(class="prettyprint linenums")
-                code #{safeSource}
-          td
-            details
-              summary Unstructured
-              pre(class="prettyprint linenums")
-                code #{unstructuredSource}
+    div(id=`case-${caseNumber}`)
+      details
+        summary Case #{caseNumber} - #{title}
+        +comments(list)
+        table( class="table table-bordered")
+          tr
+            td
+              details
+                summary Base
+                pre(class="prettyprint linenums")
+                  code(class="baseSource") #{baseSource}
+            td
+              details
+                summary Left
+                pre(class="prettyprint linenums")
+                  code(class="leftSource") #{leftSource}
+            td
+              details
+                summary Right
+                pre(class="prettyprint linenums")
+                  code(class="rightSource") #{rightSource}
+            td
+              details
+                summary MergeMethods
+                pre(class="prettyprint linenums")
+                  code(class="mergeMethodsSource") #{mergeMethodsSource}
+            td
+              details
+                summary KeepBothMethods
+                pre(class="prettyprint linenums")
+                  code(class="keepBothMethodsSource") #{keepBothMethodsSource}
+            td
+              details
+                summary Safe
+                pre(class="prettyprint linenums")
+                  code(class="safeSource") #{safeSource}
+            td
+              details
+                summary Unstructured
+                pre(class="prettyprint linenums")
+                  code(class="unstructuredSource") #{unstructuredSource}
+          tr
+            td
+              select(class="left-diff")
+                option(value="base") Base
+                option(value="left") Left
+                option(value="right") Right
+                option(value="mergeMethods") MergeMethods
+                option(value="keepBothMethods") KeepBothMethods
+                option(value="safe") Safe
+                option(value="unstructured") Unstructured
+            td
+              select(class="right-diff")
+                option(value="base") Base
+                option(value="left") Left
+                option(value="right") Right
+                option(value="mergeMethods") MergeMethods
+                option(value="keepBothMethods") KeepBothMethods
+                option(value="safe") Safe
+                option(value="unstructured") Unstructured
+            td
+              button(onClick="drawDiff(this)") Diff
+            td
+              div(class="diff-result")

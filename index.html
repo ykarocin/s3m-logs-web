@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  < script src = "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" >
+</script>
+
 
 <head>
   <meta charset="utf-8">
@@ -25,11 +28,51 @@
 
 <body>
   <div class="container-fluid">
+    <button id="1" onClick="reply_click(this.id)">B1</button>
+    <script type="text/javascript">
+      var reply_click = function(id) {
+        alert("Button clicked, id " + id);
+      }
+    </script>
 
     <h1>S3M Renaming Analysis</h1>
     <table class="table">
-      cassandra.rev_0f1fb_8b0e1.ColumnIndex.java
-      <tr><td><details><summary>Case 1 - cassandra.rev_0f1fb_8b0e1.ColumnIndex.java</summary><ul><li>Construtor do Builder</li><ul><li>Left alterou assinatura, corpo, e adicionou 1 overload</li><li>Right alterou corpo</li><li>Unstructured acusou conflito nos argumentos e no overload</li><li>Safe deu match com vazio, e manteve duas outras versões do método</li><li>MM e KB mantiveram três versões</li></ul><li>teste</li><ul><li>1</li><li>2</li><li>3</li></ul></ul><table class="table table-bordered"><tr><td><details><summary>Base</summary><pre class="prettyprint linenums"><code>/*
+
+      <tr>
+        <td>
+          <details>
+            <summary>Case 1 - cassandra.rev_0f1fb_8b0e1.ColumnIndex.java</summary>
+            <ul>
+              <li>Construtor do Builder</li>
+              <ul>
+                <li>Left alterou assinatura, corpo, e adicionou 1 overload</li>
+                <li>Right alterou corpo</li>
+                <li>Unstructured acusou conflito nos argumentos e no overload</li>
+                <li>Safe deu match com vazio, e manteve duas outras versões do método</li>
+                <li>MM e KB mantiveram três versões</li>
+              </ul>
+              <li>teste</li>
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </ul>
+            <table class="table table-bordered">
+              <tr>
+                <td>
+                  <select>
+                    <option value="Base">Base</option>
+                    <option value="Left">Left</option>
+                    <option value="Right">Right</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <details>
+                    <summary>Base</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -232,7 +275,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>Left</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Left</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -445,7 +494,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>Right</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Right</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -634,7 +689,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>MergeMethods</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>MergeMethods</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -817,7 +878,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>KeepBothMethods</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>KeepBothMethods</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -1000,7 +1067,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>Safe</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Safe</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -1251,7 +1324,13 @@
       	}
 
       }
-      </code></pre></details></td><td><details><summary>Unstructured</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Unstructured</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -1459,9 +1538,41 @@
                   return result;
               }
           }
-      }</code></pre></details></td></tr></table></details></td></tr>
+      }</code></pre>
+                  </details>
+                </td>
+              </tr>
+            </table>
+          </details>
+        </td>
+      </tr>
       test
-      <tr><td><details><summary>Case 1 - test</summary><ul><li>Construtor do Builder</li><ul><li>Left alterou assinatura, corpo, e adicionou 1 overload</li><li>Right alterou corpo</li><li>Unstructured acusou conflito nos argumentos e no overload</li><li>Safe deu match com vazio, e manteve duas outras versões do método</li><li>MM e KB mantiveram três versões</li></ul><li>teste</li><ul><li>1</li><li>2</li><li>3</li></ul></ul><table class="table table-bordered"><tr><td><details><summary>Base</summary><pre class="prettyprint linenums"><code>/*
+      <tr>
+        <td>
+          <details>
+            <summary>Case 1 - test</summary>
+            <ul>
+              <li>Construtor do Builder</li>
+              <ul>
+                <li>Left alterou assinatura, corpo, e adicionou 1 overload</li>
+                <li>Right alterou corpo</li>
+                <li>Unstructured acusou conflito nos argumentos e no overload</li>
+                <li>Safe deu match com vazio, e manteve duas outras versões do método</li>
+                <li>MM e KB mantiveram três versões</li>
+              </ul>
+              <li>teste</li>
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </ul>
+            <table class="table table-bordered">
+              <tr>
+                <td>
+                  <details>
+                    <summary>Base</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -1664,7 +1775,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>Left</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Left</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -1877,7 +1994,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>Right</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Right</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -2066,7 +2189,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>MergeMethods</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>MergeMethods</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -2249,7 +2378,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>KeepBothMethods</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>KeepBothMethods</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -2432,7 +2567,13 @@
               }
           }
       }
-      </code></pre></details></td><td><details><summary>Safe</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Safe</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -2683,7 +2824,13 @@
       	}
 
       }
-      </code></pre></details></td><td><details><summary>Unstructured</summary><pre class="prettyprint linenums"><code>/*
+      </code></pre>
+                  </details>
+                </td>
+                <td>
+                  <details>
+                    <summary>Unstructured</summary>
+                    <pre class="prettyprint linenums"><code>/*
        * Licensed to the Apache Software Foundation (ASF) under one
        * or more contributor license agreements.  See the NOTICE file
        * distributed with this work for additional information
@@ -2891,7 +3038,14 @@
                   return result;
               }
           }
-      }</code></pre></details></td></tr></table></details></td></tr>
+      }</code></pre>
+                  </details>
+                </td>
+              </tr>
+            </table>
+          </details>
+        </td>
+      </tr>
 
 
     </table>

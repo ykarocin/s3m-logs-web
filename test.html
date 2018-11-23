@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  < script src = "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" >
+</script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="dist/diff2html.css">
+
+<!-- Javascripts -->
+<script type="text/javascript" src="dist/diff2html.js"></script>
+<script type="text/javascript" src="dist/jsdiff.js"></script>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="dist/diff2html.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style media="screen">
+    table,
+    th,
+    td {
+      /* border: 1px solid grey;
+      padding: 8px; */
+    }
+
+    .row>div {
+      border: 1px solid grey;
+    }
+  </style>
+  <title></title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div id="case-1">
+
+      <select class="left-diff">
+        <option value="Base">Base</option>
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+      <select class="right-diff">
+        <option value="Base">Base</option>
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+
+      <div class="left">some left text</div>
+      <div class="right">some right text</div>
+
+      <button onClick="drawDiff(this.parentElement.id)">Diff</button>
+      <script type="text/javascript">
+        var drawDiff = function(id) {
+          let diffA = document.querySelector(`#${id} .diff-a`).value;
+          let diffB = document.querySelector(`#${id} .diff-b`).value;
+
+          let left = document.querySelector(`#${id} .${diffA}`).textContent;
+          let right = document.querySelector(`#${id} .${diffB}`).textContent;
+          let diff = JsDiff.createPatch("fileName", left, right, "base", "left");
+          let prettyDiff = Diff2Html.getPrettyHtml(diff, {inputFormat: 'diff', matching: 'lines'});
+
+          document.querySelector(".merge-result").innerHTML = prettyDiff;
+        }
+      </script>
+
+      <div class="merge-result">NOTHING</div>
+    </div>
+
+  </div>
+</body>
+</html>

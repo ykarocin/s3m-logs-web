@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="dist/diff2html.css">
 
-    <!-- Javascripts -->
-    <script type="text/javascript" src="dist/diff2html.js"></script>
-    <script type="text/javascript" src="dist/jsdiff.js"></script>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style media="screen">
       table,
@@ -32,7 +28,7 @@
 
       <h1>S3M Renaming Analysis</h1>
       <table class="table">
-        <tr><td><div id="case-1"><details><summary>Case 1 - cassandra.rev_0f1fb_8b0e1.ColumnIndex.java</summary><ul><li>Construtor do Builder</li><ul><li>Left alterou assinatura, corpo, e adicionou 1 overload</li><li>Right alterou corpo</li><li>Unstructured acusou conflito nos argumentos e no overload</li><li>Safe deu match com vazio, e manteve duas outras versões do método</li><li>MM e KB mantiveram três versões</li></ul><li>teste</li><ul><li>1</li><li>2</li><li>3</li></ul></ul><table class="table table-bordered"><tr><td><details><summary>Base</summary><pre class="prettyprint linenums"><code class="baseSource">/*
+        <tr><td id="case-1"><details><summary>Case 1 - cassandra.rev_0f1fb_8b0e1.ColumnIndex.java</summary><ul><li>Construtor do Builder</li><ul><li>Left alterou assinatura, corpo, e adicionou 1 overload</li><li>Right alterou corpo</li><li>Unstructured acusou conflito nos argumentos e no overload</li><li>Safe deu match com vazio, e manteve duas outras versões do método</li><li>MM e KB mantiveram três versões</li></ul><li>teste</li><ul><li>1</li><li>2</li><li>3</li></ul></ul><table class="table table-bordered"><tr><td><details><summary>Base</summary><pre class="prettyprint linenums"><code class="baseSource">/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -1462,7 +1458,7 @@ public class ColumnIndex
             return result;
         }
     }
-}</code></pre></details></td></tr><tr><td><select class="left-diff"><option value="base">Base</option><option value="left">Left</option><option value="right">Right</option><option value="mergeMethods">MergeMethods</option><option value="keepBothMethods">KeepBothMethods</option><option value="safe">Safe</option><option value="unstructured">Unstructured</option></select></td><td><select class="right-diff"><option value="base">Base</option><option value="left">Left</option><option value="right">Right</option><option value="mergeMethods">MergeMethods</option><option value="keepBothMethods">KeepBothMethods</option><option value="safe">Safe</option><option value="unstructured">Unstructured</option></select></td><td><button onClick="drawDiff(this)">Diff</button></td><td><div class="diff-result"></div></td></tr></table></details></div></td></tr>
+}</code></pre></details></td></tr><tr><td><select class="left-diff"><option>Base</option><option>Left</option><option>Right</option><option>MergeMethods</option><option>KeepBothMethods</option><option>Safe</option><option>Unstructured</option></select></td><td><select class="right-diff"><option>Base</option><option>Left</option><option>Right</option><option>MergeMethods</option><option>KeepBothMethods</option><option>Safe</option><option>Unstructured</option></select></td><td><button onClick="drawDiff(this.parentElement.id)">Diff</button></td><td><div class="diff-result"></div></td></tr></table></details></td></tr>
 
       </table>
 
@@ -1503,7 +1499,7 @@ public class ColumnIndex
 
       <h1>S3M Renaming Analysis</h1>
       <table class="table">
-        <tr><td><div id="case-1"><details><summary>Case 1 - test</summary><ul><li>Construtor do Builder</li><ul><li>Left alterou assinatura, corpo, e adicionou 1 overload</li><li>Right alterou corpo</li><li>Unstructured acusou conflito nos argumentos e no overload</li><li>Safe deu match com vazio, e manteve duas outras versões do método</li><li>MM e KB mantiveram três versões</li></ul><li>teste</li><ul><li>1</li><li>2</li><li>3</li></ul></ul><table class="table table-bordered"><tr><td><details><summary>Base</summary><pre class="prettyprint linenums"><code class="baseSource">/*
+        <tr><td id="case-1"><details><summary>Case 1 - test</summary><ul><li>Construtor do Builder</li><ul><li>Left alterou assinatura, corpo, e adicionou 1 overload</li><li>Right alterou corpo</li><li>Unstructured acusou conflito nos argumentos e no overload</li><li>Safe deu match com vazio, e manteve duas outras versões do método</li><li>MM e KB mantiveram três versões</li></ul><li>teste</li><ul><li>1</li><li>2</li><li>3</li></ul></ul><table class="table table-bordered"><tr><td><details><summary>Base</summary><pre class="prettyprint linenums"><code class="baseSource">/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -2933,38 +2929,26 @@ public class ColumnIndex
             return result;
         }
     }
-}</code></pre></details></td></tr><tr><td><select class="left-diff"><option value="base">Base</option><option value="left">Left</option><option value="right">Right</option><option value="mergeMethods">MergeMethods</option><option value="keepBothMethods">KeepBothMethods</option><option value="safe">Safe</option><option value="unstructured">Unstructured</option></select></td><td><select class="right-diff"><option value="base">Base</option><option value="left">Left</option><option value="right">Right</option><option value="mergeMethods">MergeMethods</option><option value="keepBothMethods">KeepBothMethods</option><option value="safe">Safe</option><option value="unstructured">Unstructured</option></select></td><td><button onClick="drawDiff(this)">Diff</button></td><td><div class="diff-result"></div></td></tr></table></details></div></td></tr>
+}</code></pre></details></td></tr><tr><td><select class="left-diff"><option>Base</option><option>Left</option><option>Right</option><option>MergeMethods</option><option>KeepBothMethods</option><option>Safe</option><option>Unstructured</option></select></td><td><select class="right-diff"><option>Base</option><option>Left</option><option>Right</option><option>MergeMethods</option><option>KeepBothMethods</option><option>Safe</option><option>Unstructured</option></select></td><td><button onClick="drawDiff(this.parentElement.id)">Diff</button></td><td><div class="diff-result"></div></td></tr></table></details></td></tr>
 
       </table>
 
     </div>
 
-    <script type="text/javascript">
-      var x;
-      var drawDiff = function(that) {
-        let caseId = that.closest("div").id;
-        let leftDiff = document.querySelector(`#${caseId} .left-diff`).value + "Source";
-        let rightDiff = document.querySelector(`#${caseId} .right-diff`).value + "Source";
-
-        console.log(leftDiff);
-        console.log(rightDiff);
-
-        let left = document.querySelector(`#${caseId} .${leftDiff}`).textContent;
-        let right = document.querySelector(`#${caseId} .${rightDiff}`).textContent;
-        let diff = JsDiff.createPatch("fileName", left, right, "base", "left");
-        let prettyDiff = Diff2Html.getPrettyHtml(diff, {inputFormat: 'diff', matching: 'lines'});
-
-        x = prettyDiff;
-
-        console.log(left);
-        console.log(right);
-
-        console.log(prettyDiff);
-
-        document.querySelector(".diff-result").innerHTML = prettyDiff;
-      }
-    </script>
 
   </body>
 
+  <script type="text/javascript">
+    var drawDiff = function(id) {
+      let leftDiff = document.querySelector(`#${id} .left-diff`).value;
+      let rightDiff = document.querySelector(`#${id} .right-diff`).value;
+
+      let left = document.querySelector(`#${id} .${diffA}`).textContent;
+      let right = document.querySelector(`#${id} .${diffB}`).textContent;
+      let diff = JsDiff.createPatch("fileName", left, right, "base", "left");
+      let prettyDiff = Diff2Html.getPrettyHtml(diff, {inputFormat: 'diff', matching: 'lines'});
+
+      document.querySelector(".diff-result").innerHTML = prettyDiff;
+    }
+  </script>
   </html>

@@ -20,3 +20,27 @@ console.log(outputHtml);
 
 
 // "<p>Timothy's Pug source code!</p>"
+
+require('colors');
+var jsdiff = require('diff');
+
+var one = 'beep boop';
+var other = 'beep boob blah';
+
+var diff = jsdiff.diffLines(one, other);
+
+diff.forEach(function(part){
+  // green for additions, red for deletions
+  // grey for common parts
+  var color = part.added ? 'green' :
+    part.removed ? 'red' : 'grey';
+  process.stderr.write(part.value[color]);
+});
+console.log();
+
+diff = jsdiff.createPatch("fileName", "oldStr", "newStr", "oldHeader", "newHeader")
+diff = jsdiff.createPatch("fileName", "oldStr", "newStr", "base", "left")
+console.log(diff);
+
+outputHtml = Diff2Html.getPrettyHtml(diff, {inputFormat: 'diff', matching: 'lines'});
+console.log(outputHtml)
