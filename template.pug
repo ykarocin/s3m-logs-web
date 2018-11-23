@@ -22,38 +22,45 @@ tr
             td
               details
                 summary Base
-                pre(class="prettyprint linenums")
-                  code(class="baseSource") #{baseSource}
+                pre
+                  code(class="baseSource", style="display:none;") #{baseSource}
+                  code(class="prettyprint linenums") #{baseSource}
             td
               details
                 summary Left
-                pre(class="prettyprint linenums")
-                  code(class="leftSource") #{leftSource}
+                pre
+                  code(class="leftSource", style="display:none;") #{leftSource}
+                  code(class="prettyprint linenums") #{leftSource}
             td
               details
                 summary Right
-                pre(class="prettyprint linenums")
-                  code(class="rightSource") #{rightSource}
+                pre
+                  code(class="rightSource", style="display:none;") #{rightSource}
+                  code(class="prettyprint linenums") #{rightSource}
             td
               details
                 summary MergeMethods
-                pre(class="prettyprint linenums")
-                  code(class="mergeMethodsSource") #{mergeMethodsSource}
+                pre
+                  code(class="mergeMethodsSource", style="display:none;") #{mergeMethodsSource}
+                  code(class="prettyprint linenums") #{mergeMethodsSource}
             td
               details
                 summary KeepBothMethods
-                pre(class="prettyprint linenums")
-                  code(class="keepBothMethodsSource") #{keepBothMethodsSource}
+                pre
+                  code(class="keepBothMethodsSource", style="display:none;") #{keepBothMethodsSource}
+                  code(class="prettyprint linenums") #{keepBothMethodsSource}
             td
               details
                 summary Safe
-                pre(class="prettyprint linenums")
-                  code(class="safeSource") #{safeSource}
+                pre
+                  code(class="safeSource", style="display:none;") #{safeSource}
+                  code(class="prettyprint linenums") #{safeSource}
             td
               details
                 summary Unstructured
-                pre(class="prettyprint linenums")
-                  code(class="unstructuredSource") #{unstructuredSource}
+                pre
+                  code(class="unstructuredSource", style="display:none;") #{unstructuredSource}
+                  code(class="prettyprint linenums") #{unstructuredSource}
           tr
             td
               select(class="left-diff")
