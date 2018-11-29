@@ -16,7 +16,7 @@ tr
     div(id=`case-${caseNumber}`)
       details
         summary Case #{caseNumber} - #{title}
-        +comments(list)
+        div !{observations}
         table( class="table table-bordered")
           tr
             td
