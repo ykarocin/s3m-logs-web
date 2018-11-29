@@ -1,0 +1,42 @@
+<ul>
+
+  <li>public void zrange(final byte[] key, final int start, final int end) </li>
+  <ul>
+
+    <li>Left modified signature parameter types: int → long</li>
+    <li>Right did not modify method</li>
+    <li>Unstructured reported no conflict</li>
+    <li>Safe reported conflict with zcount</li>
+    <li>MergeMethods reported conflict on body</li>
+    <li>KeepBothMethods did not report conflict</li>
+  </ul>
+  <li>public void zcount(final byte[] key, final double min, final double max) </li>
+  <ul>
+
+    <li>Left modified signature parameter types: double → byte[]</li>
+    <li>Right modified body and added overloaded versions of method </li>
+    <ul>
+
+      <li>One overloaded signature had parameters (final byte[] key, final byte min[], final byte max[])</li>
+    </ul>
+    <li>Unstructured reported conflict between close versions</li>
+    <li>Safe reported conflict between one version and zrange. Also kept two versions with equivalent signatures: FN, as does not compile. </li>
+    <ul>
+
+      <li>public void zcount(final byte[] key, final byte[] min, final byte[] max)</li>
+      <li>public void zcount(final byte[] key, final byte min[], final byte max[])</li>
+    </ul>
+    <li>MergeMethods kept two versions with equivalent signatures: FN, as does not compile. </li>
+    <ul>
+
+      <li>public void zcount(final byte[] key, final byte[] min, final byte[] max)</li>
+      <li>public void zcount(final byte[] key, final byte min[], final byte max[])</li>
+    </ul>
+    <li>KeepBothMethods kept two versions with equivalent signatures and same body: FN, as does not compile. </li>
+    <ul>
+
+      <li>public void zcount(final byte[] key, final byte[] min, final byte[] max)</li>
+      <li>public void zcount(final byte[] key, final byte min[], final byte max[])</li>
+    </ul>
+  </ul>
+</ul>

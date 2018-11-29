@@ -1,0 +1,21 @@
+<ul>
+
+    <li>public ForceFailStore(Store<K, V> innerStore) <ul>
+        <li>Left modified body and added overloaded constructors
+        <li>Right modified signature parameter type: Store<K, V> → Store<K, V, T>
+            <ul>
+                <li>Note: Class was also modified from "ForceFailStore<K, V> extends DelegatingStore<K, V>" to "ForceFailStore<K, V, T> extends DelegatingStore<K, V, T>"
+            </ul>
+        <li>Unstructured reported conflict between closest versions
+        <li>Safe reported conflict between closest versions
+        <li>MergeMethods merged most similar versions
+            <ul>
+                <li>Note: FN was introduced, as now some constructors use Store<K, V> and others use Store<K, V, T> and no conflict was reported
+            </ul>
+        <li>KeepBothMethods kept all versions of constructor <ul>
+            <li>Note: FN was introduced, as now some constructors use Store<K, V> and others use Store<K, V, T> and no conflict was reported</li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>

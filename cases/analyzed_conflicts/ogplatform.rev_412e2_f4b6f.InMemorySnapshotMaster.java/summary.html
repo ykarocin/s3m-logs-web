@@ -1,0 +1,39 @@
+<ul>
+
+    <li>public InMemoryConfigMaster(final MasterChangeManager changeManager) <ul>
+
+        <li>Left modified signature: type MasterChangeManager → ChangeManager
+        <li>Right modified body: type ObjectIdentifierSupplier → ObjectIdSupplier
+        <li>Unstructured reported conflict
+        <li>Safe reported conflict
+        <li>MergeMethods merged signature and body
+        <li>KeepBothMethods kept both versions
+    </ul>
+    <li> public InMemoryConfigMaster(final Supplier<ObjectIdentifier> objectIdSupplier)
+        <ul>
+            <li>Left modified body: type BasicMasterChangeManager → BasicChangeManager
+            <li>Right modified signature: type ObjectIdentifier → ObjectId
+            <li>Unstructured reported conflict
+            <li>Safe reported conflict
+            <li>MergeMethods merged signature and body
+            <li>KeepBothMethods kept both versions</li>
+        </ul>
+    <li>public InMemoryConfigMaster(final Supplier<ObjectIdentifier> objectIdSupplier, final MasterChangeManager changeManager)
+        <ul>
+            <li>Left modified signature: type MasterChangeManager → ChangeManager
+            <li>Right modified signature: type ObjectIdentifier → ObjectId
+            <li>Unstructured reported conflict only on signature
+            <li>Safe reported conflict of whole constructor
+            <li>MergeMethods reported conflict of whole constructor
+            <li>KeepBothMethods kept both versions
+        </ul>
+    <li>void remove <ul>
+        <li>Left modified body
+        <li>Right modified signature: type UniqueIdentifier → UniqueId
+        <li>Unstructured merged changes: new signature and new body
+        <li>Safe kept both versions
+        <li>MergeMethods merged changes: new signature and new body
+        <li>KeepBothMethods kept both versions</li>
+    </ul>
+    </li>
+</ul>

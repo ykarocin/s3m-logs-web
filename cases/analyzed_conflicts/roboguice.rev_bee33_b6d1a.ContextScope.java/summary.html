@@ -1,0 +1,28 @@
+<ul>
+
+    <li>public ContextScope(RoboApplication app) <ul>
+
+        <li>Left modified body: now calls a new method passing constructor app parameter <ul>
+
+            <li>Note: also removed the attribute RoboApplication app.
+        </ul>
+        <li>Right modified signature parameter type: RoboApplication → Application
+        <li>Unstructured reported conflict between methods, and also included method void exit
+        <li>Safe reported conflict between constructors
+        <li>MergeMethods merged new signature with new body <ul>
+
+            <li>Possible FN, as attribute now is not being initialized.
+        </ul>
+        <li>KeepBothMethods kept both versions of constructor
+    </ul>
+    <li>void exit <ul>
+
+        <li>Left modified body and removed method annotation
+        <li>Right removed method annotation
+        <li>Unstructured did not match methods, although was on other conflict
+        <li>Safe reported conflict between methods
+        <li>MergeMethods reported conflict between methods
+        <li>KeepBothMethods reported conflict between methods</li>
+    </ul>
+    </li>
+</ul>

@@ -1,0 +1,33 @@
+<ul>
+
+  <li>boolean resumeOnBroadcast </li>
+  <ul>
+    <li>Left modified signature and body</li>
+    <li>Right modified assinatura</li>
+    <li>Unstructured reported conflict including signature and body</li>
+    <li>Safe reported conflict including signature and body</li>
+    <li>MergeMethods reported conflict on body</li>
+    <ul>
+      <li>Note: as signature was updated, one of the bodies side is now incompatible</li>
+    </ul>
+    <li>KeepBothMethods kept both versions of method</li>
+  </ul>
+  <li>void suspend </li>
+  <ul>
+    <li>Left modified signature and body. Also extracted executeSuspend method.</li>
+    <li>Right modified body</li>
+    <li>Unstructured merged versions. Apparently, some code was lost</li>
+    <li>Safe kept two versions of the method</li>
+    <li>MergeMethods kept both versions of method</li>
+    <li>KeepBothMethods kept both versions of method</li>
+  </ul>
+  <li>boolean outputJunk </li>
+  <ul>
+    <li>Left modified signature and body</li>
+    <li>Right modified body</li>
+    <li>Unstructured correctly merged</li>
+    <li>Safe kept both versions of method</li>
+    <li>MergeMethods correctly merged</li>
+    <li>KeepBothMethods kept both versions of method</li>
+  </ul>
+</ul>

@@ -1,0 +1,30 @@
+<ul>
+
+    <li>private RestAdapter <ul>
+
+        <li>Left modified signature parameter type: Headers → HeaderPairs
+        <li>Right
+            <ul>
+                <li>Modified signature parameter type: Headers → RequestHeaders
+                <li>Modified body
+            </ul>
+        <li>Unstructured reported conflict on signature parameters
+        <li>Safe kept both versions
+        <li>MergeMethods reported conflict including whole method
+        <li>KeepBothMethods kept both versions
+    </ul>
+    <li>void setHeaders <ul>
+
+        <li>Left modified signature parameter type: Headers → HeaderPairs
+        <li>Right <ul>
+            <li>Modified signature parameter type: Headers → RequestHeaders
+            <li>Modified method name
+            <li>Modified body
+        </ul>
+        <li>Unstructured reported conflict including signature and body
+        <li>Safe kept both versions
+        <li>MergeMethods reported conflict including whole method
+        <li>KeepBothMethods kept both versions</li>
+    </ul>
+    </li>
+</ul>

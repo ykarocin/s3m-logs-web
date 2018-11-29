@@ -1,0 +1,21 @@
+<ul>
+
+    <li>void registerObserver(Context context, Object instance, Method method, Class event) <ul>
+
+        <li>Left
+            <ul>
+                <li>modified signature to make use of generics. Type: Class → Class<T>
+                <li>added overloaded versions of method
+                <li>modified body to call added overloaded version
+            </ul>
+        <li>Right modified body
+        <li>Unstructured reported conflict between near located versions of method
+        <li>Safe reported conflict between one version and empty. Kept all other versions.
+        <li>MergeMethods reported no conflict
+        <li>KeepBothMethods kept both versions of method. FN: do not compile, as they have same erasure.
+    </ul>
+    <li>void unregisterObserver(Context context, Object instance, Class event) <ul>
+        <li>Very similar to registerObserver. Difference: MergeMethods reported conflict on body</li>
+    </ul>
+    </li>
+</ul>
